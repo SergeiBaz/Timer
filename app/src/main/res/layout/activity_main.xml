@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imActiv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/timer1" />
+
+    <Button
+        android:id="@+id/bStart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:textSize="24sp"
+        app:backgroundTint="#AF0798AE"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imActiv"
+        app:layout_constraintEnd_toEndOf="@+id/number_time_chronometr"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/number_time_chronometr"
+        app:layout_constraintTop_toBottomOf="@+id/number_time_chronometr"
+        app:layout_constraintVertical_bias="0.772" />
+
+    <Button
+        android:id="@+id/bRestart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Restart"
+        android:textSize="24sp"
+        android:visibility="gone"
+        app:backgroundTint="#4E0798AE"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imActiv"
+        app:layout_constraintEnd_toEndOf="@+id/number_time_chronometr"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/number_time_chronometr"
+        app:layout_constraintTop_toBottomOf="@+id/number_time_chronometr"
+        app:layout_constraintVertical_bias="0.772" />
+    <Button
+        android:id="@+id/bStop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:textSize="24sp"
+        app:backgroundTint="#A7CB0044"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/bStart"
+        app:layout_constraintStart_toStartOf="@+id/bStart"
+        app:layout_constraintTop_toBottomOf="@+id/bStart" />
+
+    <Button
+        android:id="@+id/bContinue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:textSize="24sp"
+        android:visibility="gone"
+        app:backgroundTint="#4E0798AE"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/bStart"
+        app:layout_constraintStart_toStartOf="@+id/bStart"
+        app:layout_constraintTop_toBottomOf="@+id/bStart" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_res"
+        android:layout_width="170dp"
+        android:layout_height="130dp"
+        android:layout_marginEnd="8dp"
+        android:background="#04938888"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Chronometer
+        android:id="@+id/number_time_chronometr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textColor="#B1F4F1F1"
+        android:textSize="70sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imActiv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imActiv"
+        app:layout_constraintTop_toTopOf="@+id/imActiv"
+        app:layout_constraintVertical_bias="0.531" />
+
+    <ImageButton
+        android:id="@+id/imBatPlus"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/plus"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="@+id/number_time_chronometr"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="@+id/number_time_chronometr"
+        app:layout_constraintTop_toBottomOf="@+id/number_time_chronometr"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <ImageButton
+        android:id="@+id/imButDel"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/del"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/imBatPlus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toEndOf="@+id/imBatPlus"
+        app:layout_constraintTop_toTopOf="@+id/imBatPlus"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
